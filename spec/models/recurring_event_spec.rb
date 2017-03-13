@@ -9,7 +9,7 @@ RSpec.describe RecurringEvent, type: :model do
   it "has a calculated date based on the start date" do
     recurring_event = RecurringEvent.create(name: "plant watering", start_date: Date.new(2017, 3, 11), number_months: 1)
     calculated_date = recurring_event.calculated_date
-    expect(calculated_date).to eq(15)
+    expect(calculated_date).to eq(19)
   end
 
   it "has a delivery date based on the calculated date" do
