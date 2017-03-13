@@ -1,4 +1,6 @@
 class RecurringEvent < ApplicationRecord
+  has_many :events
+
   BANK_HOLIDAYS = [
       Date.new(2017, 1, 2),   Date.new(2017, 1, 16),  Date.new(2017, 2, 20),  Date.new(2017, 5, 29),
       Date.new(2017, 7, 4),   Date.new(2017, 9, 4),   Date.new(2017, 10, 9),  Date.new(2017, 11, 11),
