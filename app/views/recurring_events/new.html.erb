@@ -1,0 +1,8 @@
+<h1>Create a new recurring event</h1>
+
+<%= simple_form_for @recurring_event do |f| %>
+    <%= f.input :name %><br />
+    <%= f.input :start_date %><br />
+    <%= f.input :number_months %><br />
+    <%= f.button :submit, value: "create" %>
+<% end %>

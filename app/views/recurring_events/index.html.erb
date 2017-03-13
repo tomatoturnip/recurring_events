@@ -1,0 +1,19 @@
+<h1>Recurring Events</h1>
+
+<table>
+  <thead>
+  <th>Name</th>
+  <th>Next Delivery Date</th>
+  </thead>
+
+  <tbody>
+  <% if @recurring_events.present? %>
+      <% @recurring_events.each do |recurring_event| %>
+          <tr>
+            <td><%= recurring_event.name %></td>
+            <td><%= recurring_event.delivery_date %></td>
+      <% end %>
+  <% end %>
+  </tr>
+  </tbody>
+</table>

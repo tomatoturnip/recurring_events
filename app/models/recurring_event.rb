@@ -18,6 +18,10 @@ class RecurringEvent < ApplicationRecord
     check_if_bank_holiday(delivery)
   end
 
+  def next_four
+    events.last(4)
+  end
+
   private
 
   def adjust_if_weekend(delivery_date)
