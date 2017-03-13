@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170313192616) do
+ActiveRecord::Schema.define(version: 20170313212743) do
 
   create_table "events", force: :cascade do |t|
     t.date    "delivery_date"
     t.integer "recurring_event_id"
+    t.date    "next_delivery_date"
     t.index ["recurring_event_id"], name: "index_events_on_recurring_event_id"
   end
 
