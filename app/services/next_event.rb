@@ -7,8 +7,8 @@ class NextEvent
   end
 
   def calculate_next_delivery
-    number_of_months_between = recurring_event.number_months
-    event.delivery_date + number_of_months_between.month
-    # run constraint checks
+    recurring_time_interval = recurring_event.number_months
+    next_date = event.delivery_date + recurring_time_interval.month
+    CalculateDeliveryDate.new(next_date).get_future_delivery_date
   end
 end

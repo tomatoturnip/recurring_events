@@ -10,9 +10,7 @@
   <tr>
     <td><%= @recurring_event.name %></td>
     <% if @recurring_event.events.present? %>
-       <% @recurring_event.next_four.each do |recurring_event| %>
-            <td><%= recurring_event.event.delivery_date %></td>
-        <% end %>
+       <td><%= @recurring_event.next_four.map(&:delivery_date) %></td>
     <% end %>
   </tr>
   </tbody>
